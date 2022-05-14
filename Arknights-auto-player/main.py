@@ -7,12 +7,12 @@ import datetime
 adbkit = adb.adbKit()
 t = datetime.datetime.now()
 tkey = t.strftime("%Y%m%d%H%M%S")
+image_name_list = [
+    os.path.abspath(os.path.dirname(__file__)) + "/images/start.png",
+    os.path.abspath(os.path.dirname(__file__)) + "/images/choose_op.png",
+    os.path.abspath(os.path.dirname(__file__)) + "/images/end.png",
+]
 while True:
-    image_name_list = [
-        os.path.abspath(os.path.dirname(__file__)) + "/images/start.png",
-        os.path.abspath(os.path.dirname(__file__)) + "/images/choose_op.png",
-        os.path.abspath(os.path.dirname(__file__)) + "/image/end.png",
-    ]
     pngpos = tkey + ".png"
     adbkit.screenshots(pngpos)
     target_img = cv2.imread(pngpos)
