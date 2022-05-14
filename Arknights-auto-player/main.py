@@ -30,7 +30,6 @@ while True:
                 max_loc[1] + (find_height / 2),
             )
             adbkit.click(pointCentre)
-            break
     delcmdd = "rm " + pngpos
     os.system(delcmdd)
     time.sleep(5)
